@@ -58,9 +58,7 @@ Line::Line(vtkMRMLScene* scene) {
 
 void Line::RenderingLine(vtkRenderer* renderer, vtkRenderWindow* renderWindow, vtkCamera *camera) {
     this->renderWindow = renderWindow;
-    cout << "Запуск RenderingLine " << endl;
     displayNode->SetScene(this->scene);
-    this->scene->AddNode(this->displayNode);
     // Создание MRML сцены
     // Создание виджета
 
@@ -71,12 +69,6 @@ void Line::RenderingLine(vtkRenderer* renderer, vtkRenderWindow* renderWindow, v
     renderer->SetActiveCamera(camera);
     renderer->AddActor(this->slicer_line_widget->GetRepresentation());
 
-    // Создание MRML сцены
-    // Создание виджета
-    cout << "RenderingLine: renderer = " << renderer << endl;
-    cout << "RenderingLine: this->rep = " << this->rep << endl;
-    cout << "RenderingLine: viewNode = " << viewNode << endl;
-    cout << "RenderingLine: displayNode = " << displayNode << endl;
     this->slicer_line_widget->SetRenderer(renderer);
     this->slicer_line_widget->SetRepresentation(this->rep);
     this->renderWindow->Render();

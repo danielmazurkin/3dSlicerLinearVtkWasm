@@ -1,2 +1,2 @@
-/home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone/CMakeFiles/edit_cache.dir
-/home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone/CMakeFiles/rebuild_cache.dir
+/home/danil/without_error_npx/Cone/CMakeFiles/edit_cache.dir
+/home/danil/without_error_npx/Cone/CMakeFiles/rebuild_cache.dir

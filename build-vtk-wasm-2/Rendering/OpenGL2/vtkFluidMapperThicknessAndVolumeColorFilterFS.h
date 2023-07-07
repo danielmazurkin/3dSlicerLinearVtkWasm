@@ -1,6 +1,0 @@
-#ifndef vtkFluidMapperThicknessAndVolumeColorFilterFS_h
-#define vtkFluidMapperThicknessAndVolumeColorFilterFS_h
-
-extern const char *vtkFluidMapperThicknessAndVolumeColorFilterFS;
-
-#endif

@@ -4,7 +4,8 @@ project(Cone)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -frtti")
-set(CMAKE_BUILD_TYPE "RelWithDebInfo")
+
+set(CMAKE_BUILD_TYPE "Debug")
 # Устанавливаем стандарт C++14
 set(CMAKE_CXX_STANDARD 14)
 set(APPEND CMAKE_PREFIX_PATH ./slicer_mrml_repository/new_vtk_install/install/lib/)
@@ -163,6 +164,7 @@ add_library(additional_vtk ${VTKAddon_SRCS})
 set(MRMLCore_SRCS
         ./src/BasicRender/BasicRender.cpp
         ./src/Line/Line.cxx
+        ./src/Markups/Markup.cpp
         ./slicer_mrml_repository/Core/vtkMRMLVolumeNode.cxx
         ./vtk_new/Interaction/Widgets/vtkFocalPlanePointPlacer.cxx
         ./vtk_new/Rendering/Label/vtkLabelHierarchyAlgorithm.cxx
@@ -378,6 +380,7 @@ include_directories(./slicer_mrml_repository/Slicer/Libs/MRML/Logic/)
 include_directories(./slicer_mrml_repository/Slicer/Base/Logic/)
 include_directories(./src/BasicRender/)
 include_directories(./src/Line/)
+include_directories(./src/Markups/)
 
 add_library(file_line_cursive_widgets ${FILE_LINE_CURSIVE_WIDGET})
 

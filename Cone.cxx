@@ -24,6 +24,7 @@ int main(int, char*[])
 #include <emscripten/bind.h>
 #include <BasicRender.h>
 #include <Line.h>
+#include <Markup.h>
 
 EMSCRIPTEN_BINDINGS(test_app_binding)
 {
@@ -33,4 +34,31 @@ EMSCRIPTEN_BINDINGS(test_app_binding)
     .function("DestroyLine", &BasicRender::DestroyLine)
     .function("ShowLine", &BasicRender::ShowLine);
 }
+
+//int main(int argc, char *argv[]) {
+//
+//    // Создание визуализатора VTK
+//    vtkSmartPointer <vtkMRMLScene> scene = vtkSmartPointer<vtkMRMLScene>::New();
+//
+//
+//    vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
+//    vtkSmartPointer<vtkRenderWindow> renderWindow = vtkSmartPointer<vtkRenderWindow>::New();
+//    renderWindow->AddRenderer(renderer);
+//
+//    // Создание интерактора
+//    vtkSmartPointer<vtkRenderWindowInteractor> interactor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
+//    interactor->Initialize();
+//    interactor->SetRenderWindow(renderer->GetRenderWindow());
+//    renderWindow->AddRenderer(renderer);
+//    renderWindow->Render();
+//
+//    Markups markups_instance(scene, renderer, renderWindow, interactor);
+//    markups_instance.InitiliazeMarkupsData(scene);
+//    markups_instance.InitiliazeInteractiveWithMarkups(renderer, interactor);
+//
+//    vtkSmartPointer<vtkCamera> camera = vtkSmartPointer<vtkCamera>::New();
+//    renderer->SetActiveCamera(camera);
+//
+//    interactor->Start();
+//}
 #endif

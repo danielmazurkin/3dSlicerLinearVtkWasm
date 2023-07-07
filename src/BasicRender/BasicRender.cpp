@@ -49,6 +49,7 @@ void BasicRender::StartRendering(int heightRendering, int widthRendering) {
     this->renderer->SetActiveCamera(this->camera);
     this->renderWindow->Render();
     this->interactor->Start();
+
 }
 
 vtkRenderer* BasicRender::GetRenderer() {

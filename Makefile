@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone
+CMAKE_SOURCE_DIR = /home/danil/without_error_npx/Cone
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone
+CMAKE_BINARY_DIR = /home/danil/without_error_npx/Cone
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone/CMakeFiles /home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danil/without_error_npx/Cone/CMakeFiles /home/danil/without_error_npx/Cone//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/danil/without_error_npx/Cone/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

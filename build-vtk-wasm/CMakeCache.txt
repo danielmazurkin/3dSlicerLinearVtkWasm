@@ -141,7 +141,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/work/install
+CMAKE_INSTALL_PREFIX:PATH=/install
 
 //QML files (LIBDIR/qml)
 CMAKE_INSTALL_QMLDIR:PATH=
@@ -276,7 +276,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
-//The CMake toolchain file
+//No help, variable specified on the command line.
 CMAKE_TOOLCHAIN_FILE:FILEPATH=/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
 
 //If this value is on, makefiles will be generated without the
@@ -950,6 +950,9 @@ VTK_MODULE_ENABLE_VTK_InteractionStyle:STRING=DEFAULT
 //Enable the VTK::InteractionWidgets module. 
 VTK_MODULE_ENABLE_VTK_InteractionWidgets:STRING=DEFAULT
 
+//Enable the  module. MomentInvariants filter
+VTK_MODULE_ENABLE_VTK_MomentInvariants:STRING=DEFAULT
+
 //Enable the VTK::ParallelCore module. 
 VTK_MODULE_ENABLE_VTK_ParallelCore:STRING=DEFAULT
 
@@ -1007,6 +1010,9 @@ VTK_MODULE_ENABLE_VTK_RenderingLOD:STRING=DEFAULT
 
 //Enable the VTK::RenderingLabel module. 
 VTK_MODULE_ENABLE_VTK_RenderingLabel:STRING=DEFAULT
+
+//Enable the  module. Looking Glass Support for VTK
+VTK_MODULE_ENABLE_VTK_RenderingLookingGlass:STRING=DEFAULT
 
 //Enable the VTK::RenderingMatplotlib module. 
 VTK_MODULE_ENABLE_VTK_RenderingMatplotlib:STRING=DEFAULT
@@ -1223,6 +1229,9 @@ VTK_MODULE_ENABLE_VTK_verdict:STRING=DEFAULT
 
 //Enable the VTK::vpic module. 
 VTK_MODULE_ENABLE_VTK_vpic:STRING=DEFAULT
+
+//Enable the  module. Dicom classes and utilities
+VTK_MODULE_ENABLE_VTK_vtkDICOM:STRING=DEFAULT
 
 //Enable the VTK::vtksys module. 
 VTK_MODULE_ENABLE_VTK_vtksys:STRING=DEFAULT
@@ -1626,7 +1635,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=170
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=171
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -2781,6 +2790,10 @@ VTK_MODULE_ENABLE_VTK_InteractionStyle-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DE
 VTK_MODULE_ENABLE_VTK_InteractionWidgets-ADVANCED:INTERNAL=1
 //STRINGS property for variable: VTK_MODULE_ENABLE_VTK_InteractionWidgets
 VTK_MODULE_ENABLE_VTK_InteractionWidgets-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAULT
+//ADVANCED property for variable: VTK_MODULE_ENABLE_VTK_MomentInvariants
+VTK_MODULE_ENABLE_VTK_MomentInvariants-ADVANCED:INTERNAL=1
+//STRINGS property for variable: VTK_MODULE_ENABLE_VTK_MomentInvariants
+VTK_MODULE_ENABLE_VTK_MomentInvariants-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAULT
 //ADVANCED property for variable: VTK_MODULE_ENABLE_VTK_ParallelCore
 VTK_MODULE_ENABLE_VTK_ParallelCore-ADVANCED:INTERNAL=1
 //STRINGS property for variable: VTK_MODULE_ENABLE_VTK_ParallelCore
@@ -2857,6 +2870,10 @@ VTK_MODULE_ENABLE_VTK_RenderingLOD-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAUL
 VTK_MODULE_ENABLE_VTK_RenderingLabel-ADVANCED:INTERNAL=1
 //STRINGS property for variable: VTK_MODULE_ENABLE_VTK_RenderingLabel
 VTK_MODULE_ENABLE_VTK_RenderingLabel-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAULT
+//ADVANCED property for variable: VTK_MODULE_ENABLE_VTK_RenderingLookingGlass
+VTK_MODULE_ENABLE_VTK_RenderingLookingGlass-ADVANCED:INTERNAL=1
+//STRINGS property for variable: VTK_MODULE_ENABLE_VTK_RenderingLookingGlass
+VTK_MODULE_ENABLE_VTK_RenderingLookingGlass-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAULT
 //ADVANCED property for variable: VTK_MODULE_ENABLE_VTK_RenderingMatplotlib
 VTK_MODULE_ENABLE_VTK_RenderingMatplotlib-ADVANCED:INTERNAL=1
 //STRINGS property for variable: VTK_MODULE_ENABLE_VTK_RenderingMatplotlib
@@ -3145,6 +3162,10 @@ VTK_MODULE_ENABLE_VTK_verdict-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAULT
 VTK_MODULE_ENABLE_VTK_vpic-ADVANCED:INTERNAL=1
 //STRINGS property for variable: VTK_MODULE_ENABLE_VTK_vpic
 VTK_MODULE_ENABLE_VTK_vpic-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAULT
+//ADVANCED property for variable: VTK_MODULE_ENABLE_VTK_vtkDICOM
+VTK_MODULE_ENABLE_VTK_vtkDICOM-ADVANCED:INTERNAL=1
+//STRINGS property for variable: VTK_MODULE_ENABLE_VTK_vtkDICOM
+VTK_MODULE_ENABLE_VTK_vtkDICOM-STRINGS:INTERNAL=YES;WANT;DONT_WANT;NO;DEFAULT
 //ADVANCED property for variable: VTK_MODULE_ENABLE_VTK_vtksys
 VTK_MODULE_ENABLE_VTK_vtksys-ADVANCED:INTERNAL=1
 //STRINGS property for variable: VTK_MODULE_ENABLE_VTK_vtksys
@@ -3288,7 +3309,7 @@ Z_HAVE_UNISTD_H:INTERNAL=1
 //Have library m
 _EXPAT_LIBM_FOUND:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/work/install
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/install
 //CHECK_TYPE_SIZE: __int64 unknown
 __INT64:INTERNAL=
 //Have symbol HAVE_BSWAP_16

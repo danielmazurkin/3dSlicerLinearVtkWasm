@@ -1,8 +1,0 @@
-/work/build-emscripten/CMakeFiles/Cone.dir
-/work/build-emscripten/CMakeFiles/additional_vtk.dir
-/work/build-emscripten/CMakeFiles/vtk_teem_static_lib.dir
-/work/build-emscripten/CMakeFiles/file_widgets.dir
-/work/build-emscripten/CMakeFiles/mrml_core.dir
-/work/build-emscripten/CMakeFiles/file_line_cursive_widgets.dir
-/work/build-emscripten/CMakeFiles/edit_cache.dir
-/work/build-emscripten/CMakeFiles/rebuild_cache.dir

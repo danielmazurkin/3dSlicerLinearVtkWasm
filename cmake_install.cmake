@@ -1,4 +1,4 @@
-# Install script for directory: /home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone
+# Install script for directory: /home/danil/without_error_npx/Cone
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/danil/cone_test_wasm/vtk-master-Examples-Emscripten-Cxx-Cone/Examples/Emscripten/Cxx/Cone/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/danil/without_error_npx/Cone/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -5,6 +5,12 @@
 /work/build-vtk-wasm/CMakeFiles/install.dir
 /work/build-vtk-wasm/CMakeFiles/install/local.dir
 /work/build-vtk-wasm/CMakeFiles/install/strip.dir
+/work/build-vtk-wasm/Remote/CMakeFiles/edit_cache.dir
+/work/build-vtk-wasm/Remote/CMakeFiles/rebuild_cache.dir
+/work/build-vtk-wasm/Remote/CMakeFiles/list_install_components.dir
+/work/build-vtk-wasm/Remote/CMakeFiles/install.dir
+/work/build-vtk-wasm/Remote/CMakeFiles/install/local.dir
+/work/build-vtk-wasm/Remote/CMakeFiles/install/strip.dir
 /work/build-vtk-wasm/Utilities/KWIML/CMakeFiles/edit_cache.dir
 /work/build-vtk-wasm/Utilities/KWIML/CMakeFiles/rebuild_cache.dir
 /work/build-vtk-wasm/Utilities/KWIML/CMakeFiles/list_install_components.dir

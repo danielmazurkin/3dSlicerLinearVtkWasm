@@ -2,7 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build-emscripten/slicer_mrml_repository" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/slicer_mrml_repository" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/slicer_mrml_repository/Slicer" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/slicer_mrml_repository/VTK" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/vtk_new" vcs="Git" />
   </component>
